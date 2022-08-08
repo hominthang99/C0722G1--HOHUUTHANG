@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><label for="Amount">Amount</label></th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount"></td>
+        <td>
+            <select id="From">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ChangeMoney()">Convert</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="Result"></p>
+</body>
+</html>
+
+<script>
+    function ChangeMoney() {
+        let Soluong = document.getElementById("Amount").value;
+        let Tu = document.getElementById("From").value;
+        let Den = document.getElementById("To").value;
+        let Result;
+
+
+        if (Tu == "USD" && Den == "VND") {
+            Result = "Result: " + (Soluong * 23000) + " VND";
+        }
+        else if (Tu == "VND"&& Den =="USD"){
+            Result = "Result: "+ (Soluong / 23000) + " $";
+        }
+        else if (Tu == "VND") {
+            Result = "Result: " + Soluong + " VND"
+        } else {
+            Result = "Result: " + Soluong + " $"
+        }
+
+        document.getElementById("Result").innerHTML = Result;
+    }
+</script>
+</body>
+</html>
