@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung may_tinh</title>
+</head>
+<table>
+    <tr>
+    <td colspan="2"><input type="text"id="giatri1"></td>
+    <td colspan="2"><input type="text"id="giatri2"></td>
+    </tr>
+    <br>
+<td><button onclick="Cong();">Addition (+)</button></td>
+<td><button onclick="Tru();">Subtraction (-)</button></td>
+<td><button onclick="Nhan();">Multiplication (x)</button></td>
+<td><button onclick="Chia();">Division (/)</button></td>
+    </tr>
+</table>
+<p id="Key"></p>
+<script>
+    function Cong(){
+        let number1=document.getElementById('giatri1').value;
+        let number2=document.getElementById('giatri2').value;
+        number1=parseFloat(number1);
+        number2=parseFloat(number2);
+        document.getElementById('Key').innerHTML="kết quả là " +(number1+number2) ;
+    }
+    function Tru(){
+        let number1=document.getElementById('giatri1').value;
+        let number2=document.getElementById('giatri2').value;
+        number1=parseFloat(number1);
+        number2=parseFloat(number2);
+        document.getElementById('Key').innerHTML="kết quả là " +(number1-number2);
+    }
+    function Nhan(){
+        let number1=document.getElementById('giatri1').value;
+        let number2=document.getElementById('giatri2').value;
+        number1=parseFloat(number1);
+        number2=parseFloat(number2);
+        document.getElementById('Key').innerHTML="kết quả là " +(number1*number2);
+    }
+    function Chia(){
+        let number1=document.getElementById('giatri1').value;
+        let number2=document.getElementById('giatri2').value;
+        number1=parseFloat(number1);
+        number2=parseFloat(number2);
+        document.getElementById('Key').innerHTML="kết quả là "+ (number1/number2);
+    }
+
+    </script>
+</html>
