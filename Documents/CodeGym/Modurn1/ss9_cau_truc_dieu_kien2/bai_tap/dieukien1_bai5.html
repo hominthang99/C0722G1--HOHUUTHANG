@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chuyển đổi nhiệt độ</title>
+    <title>Hoàng Anh Thắng</title>
 </head>
 <body>
 </body>
 <script>
-    let C=prompt('Nhập độ C :')
-    let F = C*9/5 + 32
-    alert('Độ F là : '+ F )
+    let point1 = prompt('Nhập điểm kiểm tra hàng tuần')
+    let point2 = prompt('Nhập điểm kiểm tra giữa kì')
+    let point3 = prompt('Nhập điểm kiểm tra cuối kì')
+    let diemtb = (point1*1+point2*1+ point2*1+ point3*1 + point3*1+ point3*1) / 6
+    if ( diemtb >8) {
+        alert('Học sinh giỏi')
+    } else if (diemtb > 6.5) {
+        alert('Học sinh khá')
+    } else if (diemtb>3) {
+        alert('Học sinh trung bình')
+    } else if(diemtb<3) {
+        alert('Học sinh yếu')
+    }
 </script>
 </html>
