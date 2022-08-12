@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thu thuế cá nhận</title>
+    <title>Tính thuế</title>
 </head>
 <body>
-</body>
 <script>
-    let tienluong=prompt('Nhập tiền lương của bạn')
-    thue= tienluong*5/100
-            alert('Thuế bạn cần đóng là '+thue)
+    let tienLuong = parseInt(prompt("Nhập tiền lương (VND)"));
+    let tienThue;
+    if(tienLuong < 10000000){
+        tienThue = (tienLuong * 2) / 100;
+    }else if(tienLuong >= 10000000 && tienLuong <= 20000000){
+        tienThue = (tienLuong * 4) / 100;
+    }else {
+        tienThue = (tienLuong * 6) /100;
+    }
+    alert("Nếu tiền lương là: " + tienLuong + " VND thì bạn phải đóng " + tienThue + " VND tiền thuế thu nhập");
 </script>
+</body>
 </html>

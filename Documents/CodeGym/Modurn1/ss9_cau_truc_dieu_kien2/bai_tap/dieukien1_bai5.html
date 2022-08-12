@@ -2,22 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Xếp hạng học lực</title>
+    <title>Chuyển đổi nhiệt độ</title>
 </head>
 <body>
 </body>
 <script>
-    let diemkiemtra = prompt("Nhập điểm kiểm tra : ")
-    let diemthigiuaky = prompt("Nhập điểm thi giữa kỳ : ")
-    let diemthicuoiky = prompt("Nhập điểm cuối kỳ : ")
-    hocluc = (diemkiemtra * 1 + diemthigiuaky * 1 + diemthicuoiky * 1) / 3;
-    if (hocluc >= 8) {
-        alert('Học sinh giỏi')
-    }
-            if (hocluc < 6.5) {
-                alert('Học sinh trung bình')
-            }else{
-                    alert('Học sinh khá')
-            }
+    let C=prompt('Nhập độ C :')
+    let F = C*9/5 + 32
+    alert('Độ F là : '+ F )
 </script>
 </html>

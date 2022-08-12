@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tính lãi ngân hàng></title>
+    <title>Title</title>
 </head>
 <body>
-
-</body>
 <script>
-    let sotiengui=prompt('Nhập số tiền bạn muốn gửi')
-    let sothangchovay=prompt('Nhập số tháng bạn muốn gửi')
-    tienlai=(sotiengui*1 * sothangchovay*1)*6/100;
-    alert('Tiền lãi của bạn là VND : '+tienlai)
+    let soTien = parseFloat(prompt(" Số Tiền Gửi"));
+    let soThang = parseFloat(prompt("Số Tháng gửi"));
+    let laiSuat = parseFloat(prompt("Phần trăm lãi suất (%/tháng)"));
+    let tienLai = soTien * laiSuat * soThang;
+    alert("Tiền lãi: " + tienLai);
 </script>
+</body>
 </html>
